@@ -57,7 +57,7 @@ under the License.
                 <set field="layoutSettings.javaScripts[]" value="/common/js/jquery/plugins/jquery-jgrowl/jquery.jgrowl-1.4.6.min.js" global="true"/>
                 
                 <set field="layoutSettings.styleSheets[+0]" value="/common/js/jquery/ui/jquery-ui-1.12.1.min.css" global="true" />
-                <set field="layoutSettings.styleSheets[+0]" value="/common/js/jquery/plugins/jquery-jgrowl/1.4.1/jquery.jgrowl.min.css" global="true" />
+                <set field="layoutSettings.styleSheets[+0]" value="/common/js/jquery/plugins/jquery-jgrowl/jquery.jgrowl-1.4.6.min.css" global="true" />
                 <set field="layoutSettings.styleSheets[+0]" value="/common/js/jquery/plugins/datetimepicker/jquery-ui-timepicker-addon-1.6.3.min.css" global="true" />
 
                 <set field="layoutSettings.styleSheets[+0]" value="/ecommerce/css/bootstrap.min.css" global="true" />
@@ -86,13 +86,13 @@ under the License.
 
                      <container id="ecom-mainarea" style="row mx-2">
 
-                         <container style="col-lg-2 order-lg-1 order-2"><include-screen name="${leftbarScreenName}" location="${leftbarScreenLocation}"/></container>
-                         <container style="col-lg-8 order-lg-2 order-1">
+                         <container id="div1" style="col-lg-2 order-lg-1 order-2"><include-screen name="${leftbarScreenName}" location="${leftbarScreenLocation}"/></container>
+                         <container id="div3" style="col-lg-8 order-lg-2 order-1">
                              <!-- render messages -->
                              <platform-specific><html><html-template location="component://common-theme/template/includes/Messages.ftl"/></html></platform-specific>
                              <decorator-section-include name="body"/>
                          </container>
-                             <container style="col-lg-2 order-lg-3 order-3"><include-screen name="${rightbarScreenName}" location="${rightbarScreenLocation}"/></container>
+                             <container id="div2" style="col-lg-2 order-lg-3 order-3"><include-screen name="${rightbarScreenName}" location="${rightbarScreenLocation}"/></container>
                          <container id="div4" style="endcolumns"/>
                     </container>
 
